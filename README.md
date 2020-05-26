@@ -5,7 +5,7 @@ Long period of time, no one has make hackintosh power-button works, as limit of 
 
 ## Preparation
 
-![Attiny85](https://raw.githubusercontent.com/john-shine/Hackintosh-power-button-solution/master/images/Attiny85.jpg)
+![Attiny85](./images/Attiny85.jpg)
 + digispark Attiny85
 + Arduino IDE
 + a windows PC
@@ -14,7 +14,7 @@ Long period of time, no one has make hackintosh power-button works, as limit of 
 
 ## Circuit diagram
 
-![circuit](https://raw.githubusercontent.com/john-shine/Hackintosh-power-button-solution/master/images/circuit.jpg)
+![circuit](./images/circuit_atl.png)
 
 ## Instruction
 
@@ -24,7 +24,7 @@ Long period of time, no one has make hackintosh power-button works, as limit of 
 
 ### step 2. connecting electric circuit.
 
-  Connecting devices using electric circuit diagram above. if the voltage value in step 1 is higher than 5v, you should modify circuit, step down analog input voltage. I think it's easy to most of people. Be careful skin burns to keep safety.
+  Connecting devices using electric circuit diagram above. If the voltage value in step 1 is higher than 5v, you should modify circuit, step down analog input voltage. I think it's easy to most of people. Be careful skin burns to keep safety. (I've changed the circuit, because the [original](./images/circuit.jpg) doesn't worked for me. I had to interupt the power wire through the power button instead of the ground wire.) 
 
 ### step 3. test your modifiers virtual codes in hackintosh.
 
@@ -32,11 +32,11 @@ Long period of time, no one has make hackintosh power-button works, as limit of 
 
   Open test_modifiers/test_modifiers.ino file with IDE and click upload to compile && flush. After message "Plug in device now..." appear, replug in Attiny85. Wait flush complete, then pull out Attiny85.
   
-  ![test_modifiers](https://raw.githubusercontent.com/john-shine/Hackintosh-power-button-solution/master/images/test_modifiers.png)
+  ![test_modifiers](./images/test_modifiers.png)
 
   Visit https://pqrs.org/osx/karabiner/ and download Karabiner-Elements in hackintosh PC. Install Karabiner-Elements, you will find Karabiner event listener in menubar, launch it.
   
-  ![EventViewer](https://raw.githubusercontent.com/john-shine/Hackintosh-power-button-solution/master/images/EventViewer.JPG)
+  ![EventViewer](./images/EventViewer.JPG)
 
   plug in Attiny85. wait LED flush completed, your will see keyboard events in Karabiner event listener.
 
@@ -44,7 +44,7 @@ Long period of time, no one has make hackintosh power-button works, as limit of 
 
   Just similar to step 3, open test_voltage/test_voltage.ino and upload to Attiny85. Before that, remember to open notepad.exe window, Once codes uploaded, focus on notepad.exe window, wait for codes to execute. As a result, every voltage will print on notepad.exe in seconds, remember to press in power button to test voltage when power switch is shorted.
   
-   ![test_voltage](https://raw.githubusercontent.com/john-shine/Hackintosh-power-button-solution/master/images/voltage.png)
+   ![test_voltage](./images/voltage.png)
 
 ### step 5. complete Hackintosh-power-button-solution.ino and flash to test.
 
@@ -56,4 +56,8 @@ Long period of time, no one has make hackintosh power-button works, as limit of 
 
   Package circuit board into a box, make it untouchable and has looks, that not easy to break by force and enjoy that power button function.
 
-  ![Package to box](https://raw.githubusercontent.com/john-shine/Hackintosh-power-button-solution/master/images/Package-box.jpg)
+  ![Package to box](./images/Package-box.jpg)
+ 
+   I've packed the whole thing together like this and connected it to internal USB connector via an old USB port slot adapter.
+   
+   ![Package](./images/package.jpg)
