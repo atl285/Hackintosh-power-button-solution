@@ -15,6 +15,7 @@ Long period of time, no one has make hackintosh power-button works, as limit of 
 ## Circuit diagram
 
 ![circuit](./images/circuit_atl.png)
+<sup>For the circuit diagram the [digispark! Pinout from devianart](https://www.deviantart.com/mortenaaserud/art/Digispark-Attiny85-Pinout-738150591) based on [Creative Commons Attribution 3.0 License](https://creativecommons.org/licenses/by/3.0/) is used.</sup>
 
 ## Instruction
 
